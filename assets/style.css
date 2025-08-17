@@ -11,3 +11,7 @@
 @media (prefers-reduced-motion: reduce) {
   .spline-bg-in { animation: none; }
 }
+
+a[href="https://reflex.dev"] {
+  display: none;
+}
