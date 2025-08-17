@@ -1,0 +1,11 @@
+*.db
+assets/external/
+*.py[cod]
+__pycache__/
+.states
+.web
+__pycache__
+.env
+volatility3_*
+volatility2_*
+*.log
