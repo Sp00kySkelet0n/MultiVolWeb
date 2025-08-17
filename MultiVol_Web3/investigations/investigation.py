@@ -1,21 +1,11 @@
 # investigation.py
-from typing import List
 import reflex as rx
 from .table_state import TableState
 import glob
 from pathlib import Path
 import re
-import glob
-import re
-from pathlib import Path
 import reflex as rx
 from urllib.parse import urlparse,parse_qs,urlunparse
-
-
-import glob, re
-from pathlib import Path
-import reflex as rx
-
 class InvestigationState(rx.State):
     all_modules: list[dict[str, str]] = []   # [{value: path, label: cleaned}]
     active_tab: str = ""                      # matches tabs `value`

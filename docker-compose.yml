@@ -1,0 +1,19 @@
+services:
+  multivol_web:
+    build: .
+    container_name: multivol_web
+    restart: always
+    env_file:
+      - ./MultiVol_Web3/.env
+    environment:
+      - IS_CONTAINER=True
+    volumes:
+      - ./MultiVol_Web3/cases_management:/multivol_web/MultiVol_Web3/cases_management
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./uploaded_files:/multivol_web/uploaded_files
+      - ./app.log:/multivol_web/app.log
+      - ./MultiVol_Web3/profiles_json:/multivol_web/MultiVol_Web3/profiles_json
+      - ./MultiVol_Web3/cases:/multivol_web/MultiVol_Web3/cases
+    ports:
+      - 3000:3000
+      - 8000:8000
